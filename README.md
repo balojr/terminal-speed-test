@@ -55,13 +55,13 @@ Exit status: `0` ok, `1` could not reach the server, `2` bad arguments.
 
 ## Releases
 
-Latest: **v1.1.0**. All versions and downloads are on the
+Latest: **v1.1.0**, the first published release. Downloads are on the
 [Releases page](https://github.com/balojr/terminal-speed-test/releases).
 
 | Version | What changed |
 |---|---|
 | **v1.1.0** | Colour UI with a live chevron progress bar, connection info (IP, ASN, city, edge location), min/max/jitter, latency under load, sparklines, peak speed and data used, Network Quality Score, `-n` flag |
-| v1.0.0 | First release: latency, download and upload for Linux and Windows, `.rpm` / `.deb` / `.tar.gz` / `.zip` packages |
+| v1.0.0 | Internal first version (never published): latency, download and upload for Linux and Windows |
 
 ## How it measures
 
