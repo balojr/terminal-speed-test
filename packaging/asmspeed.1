@@ -1,0 +1,26 @@
+.TH ASMSPEED 1 "2026-11-13" "asmspeed 1.1.0" "User Commands"
+.SH NAME
+asmspeed \- terminal internet speed test written in x86-64 assembly
+.SH SYNOPSIS
+.B asmspeed
+[\fB\-t\fR \fISECONDS\fR] [\fB\-c\fR \fIN\fR] [\fB\-h\fR]
+.SH DESCRIPTION
+Measures latency, download speed and upload speed against
+speed.cloudflare.com over plain HTTP. Each direction runs over several
+parallel TCP connections. A 2 second warm-up is not counted; the reported
+speed is the average over the measured window that follows.
+.SH OPTIONS
+.TP
+.BR \-t " " \fISECONDS\fR
+Measure each direction for SECONDS seconds (1\-60, default 8).
+.TP
+.BR \-c " " \fIN\fR
+Use N parallel connections (1\-8, default 4).
+.TP
+.BR \-h ", " \-\-help
+Show usage.
+.SH EXIT STATUS
+0 on success, 1 if the server could not be reached, 2 on bad arguments.
+.SH NOTES
+Traffic is unencrypted HTTP and carries no personal data; the upload payload is zeros.
+Results are in megabits per second (1 Mbps = 1,000,000 bits/s).
